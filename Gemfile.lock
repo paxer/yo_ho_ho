@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    yo_ho_ho (0.1.0)
+    yo_ho_ho (0.0.1)
       rack
 
 GEM
