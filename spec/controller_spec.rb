@@ -8,4 +8,11 @@ RSpec.describe YoHoHo::Controller do
       expect(result).to eq('<h1>Darth Vader</h1>')
     end
   end
+
+  context '#controller' do
+    it 'underscores controller name' do
+      class StarWarsController < YoHoHo::Controller; end
+      expect(StarWarsController.new({}).controller_name).to eq('star_wars')
+    end
+  end
 end
