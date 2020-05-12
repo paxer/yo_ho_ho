@@ -3,7 +3,10 @@ RSpec.describe YoHoHo do
     expect(YoHoHo::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  context '#call' do
+    it 'returns an array' do
+      result = YoHoHo::Application.new.call(nil)
+      expect(result).to eq([200, { "Content-Type" => "text/html" }, ["Hello from Yo Ho Ho"]])
+    end
   end
 end
