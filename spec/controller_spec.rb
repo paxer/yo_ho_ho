@@ -3,7 +3,7 @@ RSpec.describe YoHoHo::Controller do
     it 'renders the ERB template' do
       controller = described_class.new({ 'ENV' => 'VARS' })
       template = '<h1><%= star_wars %></h1>'
-      expect(File).to receive(:read).with('app/views/test.html.erb').and_return(template)
+      expect(File).to receive(:read).with('app/views/yo_ho_ho/test.html.erb').and_return(template)
       result = controller.render('test', star_wars: 'Darth Vader')
       expect(result).to eq('<h1>Darth Vader</h1>')
     end
