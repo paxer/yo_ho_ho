@@ -2,12 +2,14 @@ PATH
   remote: .
   specs:
     yo_ho_ho (0.0.2)
+      erubis
       rack
 
 GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.3)
+    erubis (2.7.0)
     rack (2.2.2)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
