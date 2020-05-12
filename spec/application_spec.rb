@@ -9,11 +9,16 @@ RSpec.describe YoHoHo::Application do
       TestApp.new
     end
 
-    it 'handles GET /' do
-      get '/'
-      expect(last_response.ok?).to be_truthy
-      body = last_response.body
-      expect(body).to eq('Hello from Yo Ho Ho')
+    it 'handles GET /users/new' do
+      expect do
+        get '/users/new'
+      end.to raise_error('uninitialized constant UsersController')
+    end
+
+    it 'handles GET /accounts/create' do
+      expect do
+        get '/accounts/create'
+      end.to raise_error('uninitialized constant AccountsController')
     end
   end
 end
