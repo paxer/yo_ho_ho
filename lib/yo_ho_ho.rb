@@ -1,6 +1,7 @@
 require "yo_ho_ho/version"
 require 'yo_ho_ho/routing'
 require 'yo_ho_ho/util'
+require 'yo_ho_ho/dependencies'
 
 module YoHoHo
   class Application
