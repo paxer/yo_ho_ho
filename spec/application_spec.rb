@@ -12,13 +12,7 @@ RSpec.describe YoHoHo::Application do
     it 'handles GET /users/new' do
       expect do
         get '/users/new'
-      end.to raise_error('uninitialized constant UsersController')
-    end
-
-    it 'handles GET /accounts/create' do
-      expect do
-        get '/accounts/create'
-      end.to raise_error('uninitialized constant AccountsController')
+      end.to raise_error('cannot load such file -- users_controller')
     end
   end
 end
