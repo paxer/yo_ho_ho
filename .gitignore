@@ -9,3 +9,4 @@
 
 # rspec failure tracking
 .rspec_status
+yo_ho_ho-*.gem
