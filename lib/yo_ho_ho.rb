@@ -3,6 +3,7 @@ require 'yo_ho_ho/routing'
 require 'yo_ho_ho/util'
 require 'yo_ho_ho/dependencies'
 require 'yo_ho_ho/controller'
+require 'yo_ho_ho/file_model'
 
 module YoHoHo
   class Application
