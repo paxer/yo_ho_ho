@@ -1,5 +1,6 @@
 require 'erubis'
 require 'yo_ho_ho/file_model'
+require	'rack/request'
 
 module YoHoHo
   class Controller
@@ -11,6 +12,14 @@ module YoHoHo
 
     def env
       @env
+    end
+
+    def request
+      @request ||= Rack::Request.new(@env)
+    end
+
+    def params
+      request.params
     end
 
     def render(view_name, locals = {})
