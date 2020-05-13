@@ -25,6 +25,11 @@ module YoHoHo
       rescue
         return nil
       end
+
+      def self.all
+        files = Dir['db/quotes/*.json']
+        files.map { |f| FileModel.new f }
+      end
     end
   end
 end
