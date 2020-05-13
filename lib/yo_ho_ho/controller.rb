@@ -1,7 +1,10 @@
 require 'erubis'
+require 'yo_ho_ho/file_model'
 
 module YoHoHo
   class Controller
+    include YoHoHo::Model
+
     def initialize(env)
       @env = env
     end
